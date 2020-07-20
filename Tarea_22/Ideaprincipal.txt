@@ -1,0 +1,45 @@
+* He tratado de resolver el problema del lechero con un algoritmo que no tuviera que analizar todas las combinaciones posibles de vacas.
+Al final he desarrollado un algoritmo bastante largo, quizás demasiado pesado para seguirlo , pero he tratado de añadir bastantes comentarios
+para facilitar esta labor.
+
+########################################################################################################################
+
+La idea principal ha sido separar las vacas que se pueden comprar en  tres tipos:
+
+1.- Las vacas que llamo Top, que teniendo en cuenta la relación entre leche y peso, sí o sí hay que meterlas al camión.
+
+2.- Las vacas que llamo Full, que teniendo en cuenta la relación entre leche y peso, no merece la pena analizarlas en un primer momento.
+
+3.- Las vacas que llamo Combinar, que son las que no son ni Top ni Full.
+
+Con estos tres tipos de vacas la solución ha sido meter en el camión las vacas Top y calcular el margen que me queda. Teniendo en cuenta este margen, 
+ver la mejor combinación de vacas Combinar que me entran. Por último , con el margen que queda, ver si podemos meter vacas Full.
+
+############################################################
+
+Como determinar las vacas Top y Full ¿?¿?
+
+Una vez tenemos ordenadas por eficiencia las vacas, empezamos a llenar el camión, hasta que ya no entran más.
+
+Tendremos así el número de vacas que han entrado, a partir de cual se han quedado fuera y el margen que ha quedado en el camión.
+
+Vacas Top: La vaca top será la vaca que siempre debe ir en el camión ya que no es posible crear una combinación óptima si no está. Para ello hemos hecho
+la siguiente comparación que explicó suponiendo que tenemos 10 vacas para elegir y nos han entrado 5 llenándo el camión por orden de eficiencia.
+P1 será el peso de la vaca nº1, y E1 la eficiencia.
+Hemos metido las 5 primeras vacas y nos ha quedado supongamos un margen en el camión M. La vaca 1 será TOP si la leche que da la 1 es mayor o igual que 
+el óptimo esperado metiendo la 6.
+P1xE1 >= (P1+M)xE5. 
+Con esta supoción diferenciamos las Top.
+
+Vacas Full: La vaca Full será la vaca que solo merece la pena cargarla si  hay sitio después de cargar las Top y las Combinar. Para ello hemos hecho
+la siguiente comparación que explicó suponiendo que tenemos 10 vacas para elegir , nos han entrado 5 llenándo el camión por orden de eficiencia y dos
+estas 5 , las dos primeras,  son Top.
+P1 será el peso de la vaca nº1, y E1 la eficiencia.
+Hemos metido las 5 primeras vacas y nos ha quedado supongamos un margen M. La vaca n será Full si al meterla y conseguir el máximo esperado no mejora lo 
+que ya tenemos , es decir: la leche que ya tenemos es P1xE1+P2xE2+P3xE3+P4XE4+P5xE5 y la mejor esperada cargando la vaca n es (CapacidadCamion-Pn)xE1+PnxEn 
+Por lo tanto si P1xE1+P2xE2+P3xE3+P4XE4+P5xE5 >= (CapacidadCamion-Pn)xE1+PnxEn , La vaca nº es una vaca Full
+Con esta supoción diferenciamos las Full.
+
+##########################################
+
+Copio en la carpeta el diagrama de flujo principal que va recorriendo el algoritmo
