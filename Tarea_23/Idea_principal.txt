@@ -1,0 +1,9 @@
+* Para crear la clave mezclo la baraja de forma aleatoria con la función random.
+
+* La baraja que se crea es la que utilizo como clave para descifrar el mensaje cifrado.
+
+* En lugar modulo de 26 he tomado módulo 27 para incluir todas las letras del abecedario
+
+* EL mensaje hay que introducirlo en mayusculas.
+
+########################################################################################################################
