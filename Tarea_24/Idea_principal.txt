@@ -1,0 +1,5 @@
+* Crear un simulador ( función ) que enviándole un número decimal nos devuelva uno binario.
+
+
+
+########################################################################################################################
