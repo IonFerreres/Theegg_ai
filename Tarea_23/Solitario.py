@@ -175,7 +175,7 @@ def solitario(Mensaje):
 
 		sumamensaje1encriptado.append(abecedario[i])
 	
-	return print(sumamensaje1encriptado)
+	return print("".join(sumamensaje1encriptado))
 	
 
 solitario(Mensaje)  
@@ -328,7 +328,7 @@ def descifrar(Mensaje):
 
 		restamensaje1encriptado.append(abecedario[i])
 
-	return print(restamensaje1encriptado)
+	return print("".join(restamensaje1encriptado))
 		
 	
 descifrar(Mensaje) 
