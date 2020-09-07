@@ -8,7 +8,7 @@ z=int(input("Introduzca el número que desea pasar a binario:   "))
 
 def simulador(decimal):
     
-    binario=[] #lista para definir la longitud que tendrá el numero en binario
+    binario=[] ##lista para definir la longitud que tendrá el numero en binario
     
     i=0
     
