@@ -2,7 +2,7 @@ Mensaje=input("Introduce el mensaje a cifrar ( en mayusculas ):  ")
 
 def solitario(Mensaje):
 
-	#Mensaje=input("Introduce el mensaje a cifrar:  ")
+	##Mensaje=input("Introduce el mensaje a cifrar:  ")
 	Mensaje1=[] # convertimos a lista el mensaje, cada item será una letra o espacio
 	i = ""
 	for i in Mensaje:
