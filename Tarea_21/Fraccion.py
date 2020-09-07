@@ -1,4 +1,4 @@
-# Este programa muestra la fracción irreducible de un valor introducido por el usuario.
+## Este programa muestra la fracción irreducible de un valor introducido por el usuario.
 # El valor introducido debe estar entre los valores 0.0001 y 0.9999, ambos incluidos.
 
 # Para asegurarnos que metemos bien los datos creamos un bucle while que analizará:
