@@ -19,7 +19,7 @@ class Pokemon2():
 Picachu=Pokemon1()
 Jigglypuff=Pokemon2()
 
-Turno=0
+Turno=1
 
 while Picachu.vida>0 and Jigglypuff.vida>0:
     if Turno==1:
