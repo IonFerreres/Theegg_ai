@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Sep 11 23:11:18 2020
-
-@author: x1jferre
-"""
 class Pokemon1():
     vida=100
     ataque=55 
